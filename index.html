@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Calculator with Ads</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 10px;
+      background: #f9f9f9;
+    }
+    .ad-banner {
+      background: #ddd;
+      color: #444;
+      text-align: center;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    input[type="number"] {
+      width: 45%;
+      padding: 10px;
+      margin: 5px 2.5%;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 95%;
+      padding: 12px;
+      font-size: 18px;
+      margin-top: 10px;
+      background-color: #2e86de;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1b4f72;
+    }
+    #result {
+      margin-top: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Ad Banner -->
+  <div class="ad-banner" id="top-ad">
+    <!-- Replace this with your Google AdSense code -->
+    Top Ad Banner Placeholder
+  </div>
+
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <input type="number" id="num2" placeholder="Enter second number" />
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <div id="result"></div>
+  </div>
+
+  <!-- Bottom Ad Banner -->
+  <div class="ad-banner" id="bottom-ad">
+    <!-- Replace this with your Google AdSense code -->
+    Bottom Ad Banner Placeholder
+  </div>
+
+  <!-- Side Ad Banner -->
+  <div class="ad-banner" id="side-ad" style="max-width: 300px; margin: 20px auto;">
+    <!-- Replace this with your Google AdSense code -->
+    Side Ad Banner Placeholder
+  </div>
+
+<script>
+  function calculateSum() {
+    const n1 = parseFloat(document.getElementById('num1').value);
+    const n2 = parseFloat(document.getElementById('num2').value);
+    if (isNaN(n1) || isNaN(n2)) {
+      document.getElementById('result').innerText = "Please enter valid numbers!";
+      return;
+    }
+    const sum = n1 + n2;
+    document.getElementById('result').innerText = "Sum: " + sum;
+  }
+</script>
+
+</body>
+</html>
